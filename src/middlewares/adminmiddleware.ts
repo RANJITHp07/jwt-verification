@@ -5,7 +5,7 @@ interface DecodedToken extends JwtPayload {
     admin: boolean;
   }
 
-const adminnverify=async (req:Request,res:Response,next:NextFunction)=>{
+export const adminnverify=async (req:Request,res:Response,next:NextFunction)=>{
     try{
         const jwtSecret=process.env.JWT_KEY
         if(jwtSecret){
@@ -21,5 +21,3 @@ const adminnverify=async (req:Request,res:Response,next:NextFunction)=>{
         console.log(err)
     }
 }
-
-export default adminnverify

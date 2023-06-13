@@ -1,7 +1,7 @@
 import { Request,Response,NextFunction } from "express";
 import jwt from "jsonwebtoken"
 
-const signinverify=async (req:Request,res:Response,next:NextFunction)=>{
+export const signinverify=async (req:Request,res:Response,next:NextFunction)=>{
     try{
         const jwtSecret=process.env.JWT_KEY
         if(jwtSecret){
@@ -17,4 +17,3 @@ const signinverify=async (req:Request,res:Response,next:NextFunction)=>{
     }
 }
 
-export default signinverify
